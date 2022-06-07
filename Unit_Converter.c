@@ -6,7 +6,7 @@ void main(){
     while(1)
     {
         printf("Choose the type of Converter you want to use:\n");
-        for(int i=0;i<7;i++)
+        for(int i=0;i<=6;i++)
         {
             printf("%d\t->\t%s\n",i+1, choice[i]);
         }
