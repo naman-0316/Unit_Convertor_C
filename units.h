@@ -111,6 +111,7 @@ void fuel(){
     double (*toSIUnit[4])(double)={mileToKmpL, impMileToKmpL, kmpLToKmpL, literToKmpL};
     double (*SIUnitTo[4])(double)={kmpLToMile, kmpLToImpMile, kmpLToKmpL, kmpLToLiter};
     print_Results(toSIUnit, SIUnitTo, unit, units, ch1, ch2);
+}
 
 void exitting()
 {    
