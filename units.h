@@ -112,28 +112,9 @@ void fuel(){
     double (*SIUnitTo[4])(double)={kmpLToMile, kmpLToImpMile, kmpLToKmpL, kmpLToLiter};
     print_Results(toSIUnit, SIUnitTo, unit, units, ch1, ch2);
 
-void exitting(){
-    int ch;
-    restart:
-        printf("Would you like to give us feedback ?\n");
-        printf("1\t->\tYes\n");
-        printf("2\t->\tNo\n");
-        printf("Enter your Choice:\t");
-        scanf("%d", &ch);
-        if(ch==1){
-            system("cls");
-            feedback();
-            system("pause>nul"); // Batch script command to pause.
-            exit(0);
-        }
-        else if(ch==2){        
-            system("cls");
-            system("echo Thank you for using it...&pause>nul"); // Batch script command to print the output message with pause.
-            exit(0);
-        }
-        else{
-            system("cls");
-            printf("You Entered Wrong Choice !!\n");
-            goto restart;
-        }
+void exitting()
+{    
+    system("cls");
+    system("echo Thank you for using it...&pause>nul"); // Batch script command to print the output message with pause.
+    exit(0);
 }
