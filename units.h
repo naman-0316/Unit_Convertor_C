@@ -86,6 +86,20 @@ void speed(){
     print_Results(toSIUnit, SIUnitTo, unit, units, ch1, ch2);
 }
 
+void temperature()
+{
+    char units[3][50] = {"Celsius", "Fahrenheit", "Kelvin"};
+    char unit[3][10] = {"C", "F", "K"};
+    int ch1, ch2;
+    printf("Temperature: Convert this:\n");
+    ch1 = display(units, 3, -1);
+    printf("Temperature: Convert %s into:\n", units[ch1]);
+    ch2 = display(units, 3, ch1);
+    double (*toSIUnit[3])(double) = {CelToKel, fahToKel, kelToKel};
+    double (*SIUnitTo[3])(double) = {KelToCel, KelToFah, kelToKel};
+    print_Results(toSIUnit, SIUnitTo, unit, units, ch1, ch2);
+}
+
 void fuel(){
     char units[4][50]={"Miles per gallon", "Miles per gallon (Imperial)", "Kilometer per liter", "Liter per 100 kilometers"};
     char unit[4][10]={"mpg", "mpg", "kmpl", "L/100km"};
