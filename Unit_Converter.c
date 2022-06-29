@@ -36,7 +36,9 @@ void main(){
                 exitting();
                 break;
             default:
-                printf("Wrong Choice Option Selected\n");
+                printf("Wrong input, Program terminating!");
+                exit(0);
+                break;
         }
         system("pause");
         system("cls");
